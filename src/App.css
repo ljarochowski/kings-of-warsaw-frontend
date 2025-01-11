@@ -14,15 +14,22 @@
 /*    overflow: hidden;*/
 /*}*/
 
-/*.text-section {*/
-/*    flex: 1;*/
-/*    max-width: 485px;*/
-/*    align-self: start;*/
-/*    position: relative;*/
-/*    top: 50%;*/
-/*    left: 50%;*/
-/*    transform: translate(-50%, -50%);*/
-/*}*/
+.MuiTypography-root {padding: 1rem 0}
+li .MuiTypography-root, li.MuiListItem-root {padding: 0}
+div.MuiListItemIcon-root {min-width: 30px}
+.MuiPaper-root {padding: 0.5rem}
+
+.text-section {
+    flex: 1;
+    /*max-width: 485px;*/
+    align-self: start;
+    margin-top: 3rem;
+    padding: 0 6.5rem;
+    /*position: relative;*/
+    /*top: 50%;*/
+    /*left: 50%;*/
+    /*transform: translate(-50%, -50%);*/
+}
 
 /*.text-section h1 {*/
 /*    font-size: 48px; !* Adjust as needed *!*/
