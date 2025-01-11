@@ -1,6 +1,6 @@
 import React from 'react';
 import {Box} from "@mui/material";
-const ImageBlock = ({ src, boxHeight, mt, ml, alt = '', ...props }) => {
+const ImageBlock = ({ src, boxHeight = "100%", boxWidth = "100%", mt, ml, alt = '', ...props }) => {
     return (
         <Box sx={{
             flex: 1,
@@ -8,7 +8,7 @@ const ImageBlock = ({ src, boxHeight, mt, ml, alt = '', ...props }) => {
             justifyContent: "center",
             alignItems: "center",
             overflow: "hidden",
-            width: "100%",
+            width: boxWidth,
             height: boxHeight,
         }}>
             <img src={src} alt={alt} style={{
