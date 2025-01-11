@@ -1,0 +1,38 @@
+.page.arena {
+    grid-column: 1 / 4;
+    grid-template-columns: 355px 355px 355px;
+    justify-content: space-evenly;
+    padding: 100px 0;
+}
+
+.page.arena > div:first-child {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    max-width: 100%;
+}
+
+.page.arena .image-section {
+    height: 260px;
+}
+
+.page.arena > div:nth-child(2) img {
+    height: 275px;
+}
+.page.arena > div:nth-child(3) img {
+    height: 275px;
+}
+.page.arena > div:nth-child(4) img {
+    height: 275px;
+}
+
+/*.page.arena a {*/
+/*    display: block;*/
+/*    background: #000;*/
+/*    text-align: center;*/
+/*    height: 47px;*/
+/*    width: 179px;*/
+/*    color: #fff;*/
+/*    text-decoration: none;*/
+/*    line-height: 47px;*/
+/*}*/
+

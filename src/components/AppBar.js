@@ -11,6 +11,7 @@ const MyAppBar = () => {
                 </Typography>
                 <Button color="inherit" component={Link} to="/">Home</Button>
                 <Button color="inherit" component={Link} to="/rankings">Rankings</Button>
+                <Button color="inherit" component={Link} to="/tournaments">Tournaments</Button> {/* Add Tournaments link */}
                 <Button color="inherit" component={Link} to="/register">Register</Button>
                 <Button color="inherit" component={Link} to="/login">Login</Button>
                 <Button color="inherit" component={Link} to="/profile">Profile</Button>
@@ -20,3 +21,4 @@ const MyAppBar = () => {
 };
 
 export default MyAppBar;
+

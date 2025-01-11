@@ -1,0 +1,9 @@
+
+.about {
+    height: 910px;
+}
+
+.about .image-section img {
+    margin-top: -10px;
+    height: 970px;
+}

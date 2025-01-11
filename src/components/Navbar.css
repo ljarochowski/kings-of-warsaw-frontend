@@ -1,0 +1,28 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'YAFdJt8dAY0-1', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li {
+    margin-right: 20px;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: inherit;
+}
