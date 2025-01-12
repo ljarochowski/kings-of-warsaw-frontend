@@ -10,7 +10,7 @@ const ImageCard = ({title, action, href, image, children, ...props}) => {
                 <Typography variant="h6" sx={{paddingTop: "20px", paddingBottom: "10px"}}>
                     {title}
                 </Typography>
-                <Typography variant="body2">
+                <Typography variant="body1">
                     {children}
                 </Typography>
             </CardContent>

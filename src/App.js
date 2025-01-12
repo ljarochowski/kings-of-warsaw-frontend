@@ -6,15 +6,24 @@ import Navbar from './components/Navbar';
 import MainContent from './components/MainContent';
 
 import './App.css'
+import {createTheme, CssBaseline, ThemeProvider} from "@mui/material";
+const darkTheme = createTheme({
+    palette: {
+        mode: 'dark',
+    },
+});
 
 const App = () => {
     return (
-        <Provider store={store}>
-            <Router>
-                <Navbar />
-                <MainContent />
-            </Router>
-        </Provider>
+        <ThemeProvider theme={darkTheme}>
+            <CssBaseline />
+            <Provider store={store}>
+                <Router>
+                    <Navbar />
+                    <MainContent />
+                </Router>
+            </Provider>
+        </ThemeProvider>
     );
 };
 

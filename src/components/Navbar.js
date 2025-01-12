@@ -1,22 +1,139 @@
-import React from 'react';
-import './Navbar.css'; // Import a CSS file for styles
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import Menu from '@mui/material/Menu';
+import MenuIcon from '@mui/icons-material/Menu';
+import Container from '@mui/material/Container';
+import Avatar from '@mui/material/Avatar';
+import Button from '@mui/material/Button';
+import Tooltip from '@mui/material/Tooltip';
+import MenuItem from '@mui/material/MenuItem';
+import './Navbar.css'
+import Logo from "./Logo";
 
-const Navbar = () => {
+function createData(name, href) {
+    return { name, href };
+}
+const pages = [
+    createData('Home', '#home'),
+    createData('The Arena', '#welcome-to-the-arena'),
+    createData('The Club', '#about-kings-of-warsaw'),
+    createData('The League', '#polish-masters-league'),
+    createData('Current Standings', '#polish-masters-league-standings'),
+    createData('Tournaments', '#tournaments'),
+    createData('Kings Of WarSAW GT', '#kings-of-warsaw-gt'),
+    createData('Contact us', '#contact-us'),
+];
+const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+
+function Navbar() {
+    const [anchorElNav, setAnchorElNav] = React.useState(null);
+    const [anchorElUser, setAnchorElUser] = React.useState(null);
+
+    const handleOpenNavMenu = (event) => {
+        setAnchorElNav(event.currentTarget);
+    };
+    const handleOpenUserMenu = (event) => {
+        setAnchorElUser(event.currentTarget);
+    };
+
+    const handleCloseNavMenu = () => {
+        setAnchorElNav(null);
+    };
+
+    const handleCloseUserMenu = () => {
+        setAnchorElUser(null);
+    };
+
     return (
-        <nav className="navbar">
-            <ul className="navbar-menu">
-                <li><a href="#start">Start</a></li>
-                <li><a href="#arena">Witaj na arenie</a></li>
-                <li><a href="#about">O Kings of WarSAW</a></li>
-                <li><a href="#liga-mistrzow">Liga Mistrzów</a></li>
-                <li><a href="#liga-mistrzow-wyniki">Liga Mistrzów - Wyniki</a></li>
-                <li><a href="#turnieje">Turnieje</a></li>
-                <li><a href="#kings-of-war-gt-2024">Kings Of War GT 2024</a></li>
-                <li><a href="#kontakt">Kontakt</a></li>
-            </ul>
-        </nav>
+        <AppBar position="sticky" className="navbar">
+            <Container maxWidth="xl">
+                <Toolbar disableGutters>
+                    <Logo sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+                    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+                        <IconButton
+                            size="large"
+                            aria-label="account of current user"
+                            aria-controls="menu-appbar"
+                            aria-haspopup="true"
+                            onClick={handleOpenNavMenu}
+                            color="inherit"
+                        >
+                            <MenuIcon />
+                        </IconButton>
+                        <Menu
+                            id="menu-appbar"
+                            anchorEl={anchorElNav}
+                            anchorOrigin={{
+                                vertical: 'bottom',
+                                horizontal: 'left',
+                            }}
+                            keepMounted
+                            transformOrigin={{
+                                vertical: 'top',
+                                horizontal: 'left',
+                            }}
+                            open={Boolean(anchorElNav)}
+                            onClose={handleCloseNavMenu}
+                            sx={{ display: { xs: 'block', md: 'none' } }}
+                        >
+                            {pages.map((page) => (
+                                <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                                    <Typography sx={{ textAlign: 'center' }}>{page.name}</Typography>
+                                </MenuItem>
+                            ))}
+                        </Menu>
+                    </Box>
+                    <Logo sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                        {pages.map((page) => (
+                            <Button
+                                href={page.href}
+                                key={page.name}
+                                onClick={handleCloseNavMenu}
+                                sx={{ my: 2, color: 'white', display: 'block' }}
+                            >
+                                {page.name}
+                            </Button>
+                        ))}
+                    </Box>
+                    <Box sx={{ flexGrow: 0 }}>
+                        <Tooltip title="Open settings">
+                            <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                            </IconButton>
+                        </Tooltip>
+                        <Menu
+                            sx={{ mt: '45px' }}
+                            id="menu-appbar"
+                            anchorEl={anchorElUser}
+                            anchorOrigin={{
+                                vertical: 'top',
+                                horizontal: 'right',
+                            }}
+                            keepMounted
+                            transformOrigin={{
+                                vertical: 'top',
+                                horizontal: 'right',
+                            }}
+                            open={Boolean(anchorElUser)}
+                            onClose={handleCloseUserMenu}
+                        >
+                            {settings.map((setting) => (
+                                <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                                    <Typography sx={{ textAlign: 'center' }}>{setting}</Typography>
+                                </MenuItem>
+                            ))}
+                        </Menu>
+                    </Box>
+                </Toolbar>
+            </Container>
+        </AppBar>
     );
-};
+}
 
 export default Navbar;
 

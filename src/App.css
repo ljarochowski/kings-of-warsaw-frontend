@@ -14,10 +14,16 @@
 /*    overflow: hidden;*/
 /*}*/
 
+.anchor {visibility: hidden;position:absolute;margin-top:-50px}
 .MuiTypography-root {padding: 1rem 0}
+div.MuiCardContent-root,
 li .MuiTypography-root, li.MuiListItem-root {padding: 0}
 div.MuiListItemIcon-root {min-width: 30px}
-.MuiPaper-root {padding: 0.5rem}
+.polish-masters-league .MuiPaper-root {padding: 0.5rem}
+.welcome-to-the-arena .MuiPaper-root .MuiTypography-root {padding: 0.5rem}
+.welcome-to-the-arena h6.MuiTypography-root {padding-top: 1em}
+.welcome-to-the-arena {margin-bottom: 2rem}
+h6.MuiTypography-root + h3.MuiTypography-root {margin-top:-40px}
 
 .text-section {
     flex: 1;

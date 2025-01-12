@@ -4,13 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7e5d5d8-894b-4659-b42d-0b08a73b57ba" name="Changes" comment="PageArena -&gt; grid">
-      <change afterPath="$PROJECT_DIR$/src/components/BulletListItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ranking.js" afterDir="false" />
+    <list default="true" id="d7e5d5d8-894b-4659-b42d-0b08a73b57ba" name="Changes" comment="Split to components, theme'ing, menu improvements">
+      <change afterPath="$PROJECT_DIR$/public/static/d84672bd331b9d82a7ccbd7d1ac65752.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AboutKingsOfWarsaw.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Logo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PolishMasterLeagueStandings.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PolishMastersLeague.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Tournaments.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WelcomeToTheArena.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ImageBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ImageBlock.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ImageCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ImageCard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MainContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainContent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PageAbout.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PageAbout.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +99,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1736614833083</updated>
-      <workItem from="1736614834246" duration="21551000" />
+      <workItem from="1736614834246" duration="37702000" />
     </task>
     <task id="LOCAL-00001" summary="Testing &amp;&amp; Learning React">
       <option name="closed" value="true" />
@@ -115,7 +125,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736626384556</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="League Page, first table">
+      <option name="closed" value="true" />
+      <created>1736636975550</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1736636975550</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +154,8 @@
     <MESSAGE value="Testing &amp;&amp; Learning React" />
     <MESSAGE value="Implemented Grid2 layout" />
     <MESSAGE value="PageArena -&gt; grid" />
-    <option name="LAST_COMMIT_MESSAGE" value="PageArena -&gt; grid" />
+    <MESSAGE value="League Page, first table" />
+    <MESSAGE value="Split to components, theme'ing, menu improvements" />
+    <option name="LAST_COMMIT_MESSAGE" value="Split to components, theme'ing, menu improvements" />
   </component>
 </project>
